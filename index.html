@@ -84,9 +84,11 @@
                 <div class="img">
                     <img v-bind:src="data.imgSrc" />
                 </div>
-                <div v-for="comment in data.comments" >
+                <div v-for="comment in data.comments.slice(0, counter)" >
                     {{ comment }}
                 </div>
+                <button v-if="data.comments.length>3" v-on:click="counter += 3">Load More</button>
+                
             </div>
         </section>
         <aside class=" item sidebar bg-light rounded">
