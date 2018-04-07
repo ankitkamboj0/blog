@@ -124,7 +124,7 @@ Vue.component('signUpForm', {
         check_username(user) {
             remainingChars = 6 - user.length;
             if (user.length < 6) {
-                this.msg[name] = 'Name must contain 2 characters. ' + remainingChars + ' more to go...';
+                this.msg[name] = 'Name must contain 6 characters. ' + remainingChars + ' more to go...';
                 return false;
             } else {
                 this.msg[name] = '';
@@ -139,7 +139,7 @@ Vue.component('signUpForm', {
 
         },
         submit() {
-            alert('Great you have completed this project, keep learning.')
+            alert('Great you have completed this project')
         }
     }
 });
